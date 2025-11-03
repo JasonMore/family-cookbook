@@ -310,6 +310,11 @@ footer {
     }
 }
 
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Animation for filtering */
 @keyframes fadeIn {
     from {
@@ -320,8 +325,4 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.recipe-card {
-    animation: fadeIn 0.5s ease;
 }

@@ -7,19 +7,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const recipeCards = document.querySelectorAll('.recipe-card');
     const viewRecipeButtons = document.querySelectorAll('.btn-view-recipe');
 
+    // Cache searchable content for better performance
+    const searchableContent = Array.from(recipeCards).map(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        const description = card.querySelector('.recipe-description').textContent.toLowerCase();
+        const ingredients = card.querySelector('.recipe-details ul')?.textContent.toLowerCase() || '';
+        return {
+            card: card,
+            text: title + ' ' + description + ' ' + ingredients
+        };
+    });
+
     // Search functionality
     searchInput.addEventListener('input', function(e) {
         const searchTerm = e.target.value.toLowerCase();
         
-        recipeCards.forEach(card => {
-            const title = card.querySelector('h2').textContent.toLowerCase();
-            const description = card.querySelector('.recipe-description').textContent.toLowerCase();
-            const ingredients = card.querySelector('.recipe-details ul')?.textContent.toLowerCase() || '';
-            
-            if (title.includes(searchTerm) || description.includes(searchTerm) || ingredients.includes(searchTerm)) {
-                card.classList.remove('hidden');
+        searchableContent.forEach(item => {
+            if (item.text.includes(searchTerm)) {
+                item.card.classList.remove('hidden');
             } else {
-                card.classList.add('hidden');
+                item.card.classList.add('hidden');
             }
         });
     });
@@ -69,9 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Add smooth scroll behavior for the entire page
-    document.documentElement.style.scrollBehavior = 'smooth';
 
     // Log loaded recipes for debugging
     console.log(`Family Cookbook loaded with ${recipeCards.length} recipes`);
