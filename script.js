@@ -70,17 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Scroll to recipe if expanding, respecting user motion preferences
             if (recipeCard.classList.contains('expanded')) {
-                setTimeout(() => {
-                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                    recipeCard.scrollIntoView({ 
-                        behavior: prefersReducedMotion ? 'auto' : 'smooth', 
-                        block: 'nearest' 
-                    });
-                }, 100);
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                recipeCard.scrollIntoView({ 
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth', 
+                    block: 'nearest' 
+                });
             }
         });
     });
-
-    // Log loaded recipes for debugging
-    console.log(`Family Cookbook loaded with ${recipeCards.length} recipes`);
 });
