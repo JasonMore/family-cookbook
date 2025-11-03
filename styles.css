@@ -310,9 +310,11 @@ footer {
     }
 }
 
-/* Smooth scroll behavior */
-html {
-    scroll-behavior: smooth;
+/* Smooth scroll behavior - respects user motion preferences */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 /* Animation for filtering */

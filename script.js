@@ -68,10 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const recipeCard = this.closest('.recipe-card');
             recipeCard.classList.toggle('expanded');
             
-            // Scroll to recipe if expanding
+            // Scroll to recipe if expanding, respecting user motion preferences
             if (recipeCard.classList.contains('expanded')) {
                 setTimeout(() => {
-                    recipeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    recipeCard.scrollIntoView({ 
+                        behavior: prefersReducedMotion ? 'auto' : 'smooth', 
+                        block: 'nearest' 
+                    });
                 }, 100);
             }
         });
