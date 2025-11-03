@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern family cookbook with treasured recipes passed down through generations">
+    <title>Family Cookbook - Treasured Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍳 Family Cookbook</h1>
+            <p class="tagline">Treasured recipes passed down through generations</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="breakfast">Breakfast</button>
+                <button class="filter-btn" data-category="main">Main Course</button>
+                <button class="filter-btn" data-category="dessert">Dessert</button>
+                <button class="filter-btn" data-category="baking">Baking</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="recipe-grid" id="recipeGrid">
+            <!-- Recipe Card 1 -->
+            <article class="recipe-card" data-category="breakfast">
+                <div class="recipe-image">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🥞</div>
+                </div>
+                <div class="recipe-content">
+                    <h2>Grandma's Pancakes</h2>
+                    <p class="recipe-meta">
+                        <span class="category">Breakfast</span>
+                        <span class="time">⏱️ 20 mins</span>
+                    </p>
+                    <p class="recipe-description">Fluffy, golden pancakes that have been a family favorite for three generations. Perfect for lazy Sunday mornings.</p>
+                    <div class="recipe-details">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>2 cups all-purpose flour</li>
+                            <li>2 tablespoons sugar</li>
+                            <li>2 teaspoons baking powder</li>
+                            <li>1 teaspoon salt</li>
+                            <li>2 eggs</li>
+                            <li>1¾ cups milk</li>
+                            <li>¼ cup melted butter</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Mix dry ingredients in a large bowl</li>
+                            <li>Whisk eggs, milk, and melted butter in another bowl</li>
+                            <li>Combine wet and dry ingredients until just mixed</li>
+                            <li>Heat griddle to medium-high and lightly grease</li>
+                            <li>Pour ¼ cup batter for each pancake</li>
+                            <li>Cook until bubbles form, flip and cook until golden</li>
+                        </ol>
+                    </div>
+                    <button class="btn-view-recipe">View Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe Card 2 -->
+            <article class="recipe-card" data-category="main">
+                <div class="recipe-image">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🍝</div>
+                </div>
+                <div class="recipe-content">
+                    <h2>Mom's Spaghetti Bolognese</h2>
+                    <p class="recipe-meta">
+                        <span class="category">Main Course</span>
+                        <span class="time">⏱️ 45 mins</span>
+                    </p>
+                    <p class="recipe-description">A rich and hearty meat sauce that simmers to perfection. This is comfort food at its finest.</p>
+                    <div class="recipe-details">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 lb ground beef</li>
+                            <li>1 onion, diced</li>
+                            <li>3 cloves garlic, minced</li>
+                            <li>28 oz crushed tomatoes</li>
+                            <li>6 oz tomato paste</li>
+                            <li>1 cup red wine</li>
+                            <li>2 tablespoons olive oil</li>
+                            <li>1 teaspoon dried oregano</li>
+                            <li>1 teaspoon dried basil</li>
+                            <li>Salt and pepper to taste</li>
+                            <li>1 lb spaghetti</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Heat olive oil in a large pot over medium heat</li>
+                            <li>Sauté onion until soft, add garlic and cook 1 minute</li>
+                            <li>Add ground beef and cook until browned</li>
+                            <li>Stir in tomato paste and cook 2 minutes</li>
+                            <li>Add crushed tomatoes, wine, and seasonings</li>
+                            <li>Simmer for 30 minutes, stirring occasionally</li>
+                            <li>Cook spaghetti according to package directions</li>
+                            <li>Serve sauce over spaghetti with parmesan cheese</li>
+                        </ol>
+                    </div>
+                    <button class="btn-view-recipe">View Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe Card 3 -->
+            <article class="recipe-card" data-category="dessert">
+                <div class="recipe-image">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🍪</div>
+                </div>
+                <div class="recipe-content">
+                    <h2>Aunt Sally's Chocolate Chip Cookies</h2>
+                    <p class="recipe-meta">
+                        <span class="category">Dessert</span>
+                        <span class="time">⏱️ 25 mins</span>
+                    </p>
+                    <p class="recipe-description">Crispy on the outside, chewy on the inside - these cookies are legendary at family gatherings.</p>
+                    <div class="recipe-details">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>2¼ cups all-purpose flour</li>
+                            <li>1 teaspoon baking soda</li>
+                            <li>1 teaspoon salt</li>
+                            <li>1 cup butter, softened</li>
+                            <li>¾ cup granulated sugar</li>
+                            <li>¾ cup packed brown sugar</li>
+                            <li>2 large eggs</li>
+                            <li>2 teaspoons vanilla extract</li>
+                            <li>2 cups chocolate chips</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Preheat oven to 375°F (190°C)</li>
+                            <li>Combine flour, baking soda, and salt</li>
+                            <li>Beat butter and both sugars until creamy</li>
+                            <li>Add eggs and vanilla, beat well</li>
+                            <li>Gradually blend in flour mixture</li>
+                            <li>Stir in chocolate chips</li>
+                            <li>Drop rounded tablespoons onto ungreased cookie sheets</li>
+                            <li>Bake 9-11 minutes until golden brown</li>
+                        </ol>
+                    </div>
+                    <button class="btn-view-recipe">View Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe Card 4 -->
+            <article class="recipe-card" data-category="baking">
+                <div class="recipe-image">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🍞</div>
+                </div>
+                <div class="recipe-content">
+                    <h2>Grandpa's Sourdough Bread</h2>
+                    <p class="recipe-meta">
+                        <span class="category">Baking</span>
+                        <span class="time">⏱️ 24 hours</span>
+                    </p>
+                    <p class="recipe-description">A tangy, crusty sourdough with a soft interior. This recipe has been perfected over decades.</p>
+                    <div class="recipe-details">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>1 cup active sourdough starter</li>
+                            <li>1½ cups warm water</li>
+                            <li>4 cups bread flour</li>
+                            <li>2 teaspoons salt</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Mix starter and water in a large bowl</li>
+                            <li>Add flour and mix until shaggy dough forms</li>
+                            <li>Let rest 30 minutes (autolyse)</li>
+                            <li>Add salt and knead until smooth</li>
+                            <li>Let rise 8-12 hours at room temperature</li>
+                            <li>Shape into a round loaf</li>
+                            <li>Place in banneton, proof 2-4 hours</li>
+                            <li>Bake at 450°F for 30-40 minutes</li>
+                        </ol>
+                    </div>
+                    <button class="btn-view-recipe">View Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe Card 5 -->
+            <article class="recipe-card" data-category="dessert">
+                <div class="recipe-image">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">🥧</div>
+                </div>
+                <div class="recipe-content">
+                    <h2>Nana's Apple Pie</h2>
+                    <p class="recipe-meta">
+                        <span class="category">Dessert</span>
+                        <span class="time">⏱️ 1 hour</span>
+                    </p>
+                    <p class="recipe-description">The quintessential American dessert with a flaky crust and cinnamon-spiced apple filling.</p>
+                    <div class="recipe-details">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>2 pie crusts (homemade or store-bought)</li>
+                            <li>6-7 cups sliced apples (Granny Smith)</li>
+                            <li>¾ cup sugar</li>
+                            <li>2 tablespoons all-purpose flour</li>
+                            <li>1 teaspoon ground cinnamon</li>
+                            <li>¼ teaspoon nutmeg</li>
+                            <li>2 tablespoons butter</li>
+                            <li>1 egg (for egg wash)</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Preheat oven to 425°F (220°C)</li>
+                            <li>Line pie dish with one crust</li>
+                            <li>Mix apples, sugar, flour, cinnamon, and nutmeg</li>
+                            <li>Fill pie crust with apple mixture</li>
+                            <li>Dot with butter</li>
+                            <li>Cover with second crust, seal and crimp edges</li>
+                            <li>Cut slits in top, brush with egg wash</li>
+                            <li>Bake 40-50 minutes until golden and bubbly</li>
+                        </ol>
+                    </div>
+                    <button class="btn-view-recipe">View Full Recipe</button>
+                </div>
+            </article>
+
+            <!-- Recipe Card 6 -->
+            <article class="recipe-card" data-category="main">
+                <div class="recipe-image">
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">🍗</div>
+                </div>
+                <div class="recipe-content">
+                    <h2>Uncle Joe's BBQ Chicken</h2>
+                    <p class="recipe-meta">
+                        <span class="category">Main Course</span>
+                        <span class="time">⏱️ 50 mins</span>
+                    </p>
+                    <p class="recipe-description">Tender, juicy chicken with a sweet and tangy BBQ sauce. Perfect for summer cookouts.</p>
+                    <div class="recipe-details">
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <li>4 lbs chicken pieces</li>
+                            <li>2 cups BBQ sauce</li>
+                            <li>¼ cup brown sugar</li>
+                            <li>2 tablespoons apple cider vinegar</li>
+                            <li>1 tablespoon Worcestershire sauce</li>
+                            <li>1 teaspoon garlic powder</li>
+                            <li>1 teaspoon onion powder</li>
+                            <li>Salt and pepper to taste</li>
+                        </ul>
+                        <h3>Instructions:</h3>
+                        <ol>
+                            <li>Season chicken with salt, pepper, garlic and onion powder</li>
+                            <li>Mix BBQ sauce, brown sugar, vinegar, and Worcestershire</li>
+                            <li>Preheat grill to medium heat</li>
+                            <li>Grill chicken 6-8 minutes per side</li>
+                            <li>Brush with sauce during last 10 minutes</li>
+                            <li>Cook until internal temp reaches 165°F</li>
+                            <li>Let rest 5 minutes before serving</li>
+                        </ol>
+                    </div>
+                    <button class="btn-view-recipe">View Full Recipe</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Family Cookbook. Made with ❤️ for sharing family recipes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
